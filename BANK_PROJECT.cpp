@@ -81,25 +81,25 @@ void menu() {
     printf("\n");
     printf("\t\t-----------------------------------------------------\n");
     printf("\n");
-    printf("\t\t      1.     °è ÁÂ      °³ ¼³    \n");
+    printf("\t\t      1.     ê³„ ì¢Œ      ê°œ ì„¤    \n");
     printf("\n");
-    printf("\t\t      2.        ÀÔ   ±İ    \n");
+    printf("\t\t      2.        ì…   ê¸ˆ    \n");
     printf("\n");
-    printf("\t\t      3.        Ãâ   ±İ    \n");
+    printf("\t\t      3.        ì¶œ   ê¸ˆ    \n");
     printf("\n");
-    printf("\t\t      4.     ÀÜ ¾×      Á¶ È¸    \n");
+    printf("\t\t      4.     ì” ì•¡      ì¡° íšŒ    \n");
     printf("\n");
-    printf("\t\t      5.     ¸ğµç    È¸ ¿ø      Á¶ È¸    \n");
+    printf("\t\t      5.     ëª¨ë“     íšŒ ì›      ì¡° íšŒ    \n");
     printf("\n");
-    printf("\t\t      6.     º» ÀÎ   Á¤ º¸      Á¶ È¸    \n");
+    printf("\t\t      6.     ë³¸ ì¸   ì • ë³´      ì¡° íšŒ    \n");
     printf("\n");
-    printf("\t\t      7.     È¸ ¿ø      »è Á¦    \n");
+    printf("\t\t      7.     íšŒ ì›      ì‚­ ì œ    \n");
     printf("\n");
-    printf("\t\t      8.     ÇÁ·Î±×·¥  Á¾·á     \n");
+    printf("\t\t      8.     í”„ë¡œê·¸ë¨  ì¢…ë£Œ     \n");
     printf("\n");
     printf("\t\t-----------------------------------------------------\n");
     printf("\n");
-    printf("\t\t\t    ¸Ş´º ¼±ÅÃ : ");
+    printf("\t\t\t    ë©”ë‰´ ì„ íƒ : ");
 }
 int account_opening() {
    
@@ -135,22 +135,22 @@ int account_opening() {
 
     printf("\n\n");
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\t¿øÇÏ´Â °èÁÂ ¹øÈ£  *5ÀÚ¸® (- ÇÏÀÌÇÂ) »©°í ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\tì›í•˜ëŠ” ê³„ì¢Œ ë²ˆí˜¸  *5ìë¦¬ (- í•˜ì´í”ˆ) ë¹¼ê³  ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%d", &useraccnum);
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\tÀÌ¸§ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\tì´ë¦„ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%s", username);
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\tÁÖ¹Îµî·Ï¹øÈ£ *14ÀÚ¸® (- ÇÏÀÌÇÂ) ³Ö°í ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\tì£¼ë¯¼ë“±ë¡ë²ˆí˜¸ *14ìë¦¬ (- í•˜ì´í”ˆ) ë„£ê³  ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%s", userssn);
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\tÇÚµåÆù ¹øÈ£ *11ÀÚ¸® (- ÇÏÀÌÇÂ) »©°í ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\tí•¸ë“œí° ë²ˆí˜¸ *11ìë¦¬ (- í•˜ì´í”ˆ) ë¹¼ê³  ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%s", userphone);
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\t»ç¿ëÇÏ½Ç ºñ¹Ğ¹øÈ£  *4ÀÚ¸® ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\tì‚¬ìš©í•˜ì‹¤ ë¹„ë°€ë²ˆí˜¸  *4ìë¦¬ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%s", userpass);
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\t»ç¿ëÀÚÀÇ ³ªÀÌ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\tì‚¬ìš©ìì˜ ë‚˜ì´ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%d", &userage);
 
 
@@ -159,11 +159,11 @@ int account_opening() {
 
     if (mysql_query(con, query)) {
         printf("\t\t-----------------------------------------------------\n");
-        fprintf(stderr, "\t\t°³¼³ÀÌ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù. %s\n", mysql_error(con));
+        fprintf(stderr, "\t\tê°œì„¤ì´ ì‹¤íŒ¨ í•˜ì˜€ìŠµë‹ˆë‹¤. %s\n", mysql_error(con));
     }
     else {
         printf("\t\t-----------------------------------------------------\n");
-        printf("\t\t°³¼³ÀÌ ¿Ï·á µÇ¾ú½À´Ï´Ù.\n");
+        printf("\t\tê°œì„¤ì´ ì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.\n");
     }
 
     mysql_close(con);
@@ -233,8 +233,8 @@ int all_check_page() {
     MYSQL_ROW row;
     
     printf("\n\n\n");
-    printf("\t\t\t\t°èÁÂ Á¤º¸ Á¶È¸\n\n\n");
-    printf("\t¤¿-°èÁÂ------------ÀÌ¸§-----------³ªÀÌ--------------ÈŞ´ëÆù----------¦¤\n");
+    printf("\t\t\t\tê³„ì¢Œ ì •ë³´ ì¡°íšŒ\n\n\n");
+    printf("\tã…-ê³„ì¢Œ------------ì´ë¦„-----------ë‚˜ì´--------------íœ´ëŒ€í°----------â”\n");
     while (row = mysql_fetch_row(result))
 
     {
@@ -246,7 +246,7 @@ int all_check_page() {
             printf("          %s ", row[i]);
 
         }
-        printf("\n\t¤¿------------------------------------------------------------------¤Ã\n");
+        printf("\n\tã…------------------------------------------------------------------ã…“\n");
     }
     printf("\n\n\n\n");
 
@@ -286,27 +286,27 @@ int input() {
  
     printf("\n\n");
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\tº»ÀÎ °èÁÂ ¹øÈ£  *5ÀÚ¸® (- ÇÏÀÌÇÂ) »©°í ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\të³¸ì¸ ê³„ì¢Œ ë²ˆí˜¸  *5ìë¦¬ (- í•˜ì´í”ˆ) ë¹¼ê³  ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%d", &useraccnum);
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\tÀÔ±İÇÒ ±İ¾×À» ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\tì…ê¸ˆí•  ê¸ˆì•¡ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%d", &inputmoney);
 
     if (inputmoney <= 0) {
         printf("\t\t-----------------------------------------------------\n");
-        printf("\t\tÀÔ±İÇÒ ±İ¾×Àº 0º¸´Ù Ä¿¾ß ÇÕ´Ï´Ù.\n");
-        return 0; // ÀÔ·Â ½ÇÆĞ¸¦ ³ªÅ¸³»´Â °ª ¶Ç´Â ÄÚµå¸¦ ¹İÈ¯
+        printf("\t\tì…ê¸ˆí•  ê¸ˆì•¡ì€ 0ë³´ë‹¤ ì»¤ì•¼ í•©ë‹ˆë‹¤.\n");
+        return 0; 
     }
 
     snprintf(query, sizeof(query), "INSERT INTO membermoneytbl (num,useraccnum,inputmoney,outputmoney,date)  VALUES (null,%d,%d,%d,now())", useraccnum, inputmoney, outputmoney);
 
     if (mysql_query(con, query)) {
         printf("\t\t-----------------------------------------------------\n");
-        fprintf(stderr, "\t\tÀÔ±İÀÌ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù. %s\n", mysql_error(con));
+        fprintf(stderr, "\t\tì…ê¸ˆì´ ì‹¤íŒ¨ í•˜ì˜€ìŠµë‹ˆë‹¤. %s\n", mysql_error(con));
     }
     else {
         printf("\t\t-----------------------------------------------------\n");
-        printf("\t\t%d¿ø ÀÔ±İ¿Ï·á µÇ¾ú½À´Ï´Ù.\n", inputmoney);
+        printf("\t\t%dì› ì…ê¸ˆì™„ë£Œ ë˜ì—ˆìŠµë‹ˆë‹¤.\n", inputmoney);
     }
 
      
@@ -337,63 +337,63 @@ int output() {
 
     printf("\n\n");
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\tº»ÀÎ °èÁÂ ¹øÈ£  *5ÀÚ¸® (- ÇÏÀÌÇÂ) »©°í ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\të³¸ì¸ ê³„ì¢Œ ë²ˆí˜¸  *5ìë¦¬ (- í•˜ì´í”ˆ) ë¹¼ê³  ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%d", &useraccnum);
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\tÃâ±İÇÒ ±İ¾×À» ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\tì¶œê¸ˆí•  ê¸ˆì•¡ì„ ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%d", &outputmoney);
 
     if (outputmoney <= 0) {
         printf("\t\t-----------------------------------------------------\n");
-        printf("\t\tÃâ±İÇÒ ±İ¾×Àº 0º¸´Ù Ä¿¾ß ÇÕ´Ï´Ù.\n");
-        mysql_close(con); // ¿¬°á Á¾·á
-        return 0; // ÀÔ·Â ½ÇÆĞ¸¦ ³ªÅ¸³»´Â °ª ¶Ç´Â ÄÚµå¸¦ ¹İÈ¯
+        printf("\t\tì¶œê¸ˆí•  ê¸ˆì•¡ì€ 0ë³´ë‹¤ ì»¤ì•¼ í•©ë‹ˆë‹¤.\n");
+        mysql_close(con); 
+        return 0; 
     }
 
-    // Ãâ±İ °¡´É ¿©ºÎ È®ÀÎ
+    // ì¶œê¸ˆ ê°€ëŠ¥ ì—¬ë¶€ í™•ì¸
     snprintf(query, sizeof(query), "SELECT SUM(inputmoney - outputmoney) AS balance FROM membermoneytbl WHERE useraccnum = %d", useraccnum);
 
     if (mysql_query(con, query)) {
         printf("\t\t-----------------------------------------------------\n");
-        fprintf(stderr, "\t\tÀÜ¾× Á¶È¸ ½ÇÆĞ: %s\n", mysql_error(con));
-        mysql_close(con); // ¿¬°á Á¾·á
-        return 0; // ÀÔ·Â ½ÇÆĞ¸¦ ³ªÅ¸³»´Â °ª ¶Ç´Â ÄÚµå¸¦ ¹İÈ¯
+        fprintf(stderr, "\t\tì”ì•¡ ì¡°íšŒ ì‹¤íŒ¨: %s\n", mysql_error(con));
+        mysql_close(con); 
+        return 0; 
     }
 
     MYSQL_RES* result = mysql_store_result(con);
 
     if (result == NULL) {
-        fprintf(stderr, "\t\tÀÜ¾× Á¶È¸ °á°ú °¡Á®¿À±â ½ÇÆĞ\n");
-        mysql_close(con); // ¿¬°á Á¾·á
-        return 0; // ÀÔ·Â ½ÇÆĞ¸¦ ³ªÅ¸³»´Â °ª ¶Ç´Â ÄÚµå¸¦ ¹İÈ¯
+        fprintf(stderr, "\t\tì”ì•¡ ì¡°íšŒ ê²°ê³¼ ê°€ì ¸ì˜¤ê¸° ì‹¤íŒ¨\n");
+        mysql_close(con); 
+        return 0; 
     }
 
     row = mysql_fetch_row(result);
 
     int balance = atoi(row[0]);
-    mysql_free_result(result); // °á°ú ¸Ş¸ğ¸® ÇØÁ¦
+    mysql_free_result(result); 
 
     if (outputmoney > balance) {
         printf("\t\t-----------------------------------------------------\n");
-        printf("\t\tÀÜ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù. Ãâ±İÇÒ ¼ö ¾ø½À´Ï´Ù.\n");
-        mysql_close(con); // ¿¬°á Á¾·á
-        return 0; // ÀÔ·Â ½ÇÆĞ¸¦ ³ªÅ¸³»´Â °ª ¶Ç´Â ÄÚµå¸¦ ¹İÈ¯
+        printf("\t\tì”ì•¡ì´ ë¶€ì¡±í•©ë‹ˆë‹¤. ì¶œê¸ˆí•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n");
+        mysql_close(con); 
+        return 0; 
     }
 
-    // Ãâ±İ Äõ¸® ½ÇÇà
+    // ì¶œê¸ˆ ì¿¼ë¦¬ ì‹¤í–‰
     snprintf(query, sizeof(query), "INSERT INTO membermoneytbl (num, useraccnum, inputmoney, outputmoney, date) VALUES (null, %d, 0, %d, now())", useraccnum, outputmoney);
 
     if (mysql_query(con, query)) {
         printf("\t\t-----------------------------------------------------\n");
-        fprintf(stderr, "\t\tÃâ±İÀÌ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù. %s\n", mysql_error(con));
-        mysql_close(con); // ¿¬°á Á¾·á
-        return 0; // ÀÔ·Â ½ÇÆĞ¸¦ ³ªÅ¸³»´Â °ª ¶Ç´Â ÄÚµå¸¦ ¹İÈ¯
+        fprintf(stderr, "\t\tì¶œê¸ˆì´ ì‹¤íŒ¨ í•˜ì˜€ìŠµë‹ˆë‹¤. %s\n", mysql_error(con));
+        mysql_close(con); 
+        return 0; 
     }
     else {
         printf("\t\t-----------------------------------------------------\n");
-        printf("\t\t%d¿øÀÌ Ãâ±İ ¿Ï·áµÇ¾ú½À´Ï´Ù.\n", outputmoney);
-        mysql_close(con); // ¿¬°á Á¾·á
-        return 1; // ÀÔ·Â ¼º°øÀ» ³ªÅ¸³»´Â °ª ¶Ç´Â ÄÚµå¸¦ ¹İÈ¯
+        printf("\t\t%dì›ì´ ì¶œê¸ˆ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.\n", outputmoney);
+        mysql_close(con); 
+        return 1; 
     }
     
 }
@@ -428,18 +428,18 @@ int money_check_page(){
 
     printf("\n\n");
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\tº»ÀÎ °èÁÂ ¹øÈ£  *5ÀÚ¸® (- ÇÏÀÌÇÂ) »©°í ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\të³¸ì¸ ê³„ì¢Œ ë²ˆí˜¸  *5ìë¦¬ (- í•˜ì´í”ˆ) ë¹¼ê³  ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%d", &useraccnum);
 
     snprintf(query, sizeof(query), "select useraccnum,sum(inputmoney-outputmoney) from membermoneytbl where useraccnum = '%d'",useraccnum);
 
     if (mysql_query(con, query)) {
         printf("\t\t-----------------------------------------------------\n");
-        fprintf(stderr, "\t\tÀÜ¾× Á¶È¸ ½ÇÆĞ :  %s\n", mysql_error(con));
+        fprintf(stderr, "\t\tì”ì•¡ ì¡°íšŒ ì‹¤íŒ¨ :  %s\n", mysql_error(con));
     }
     else {
         printf("\t\t-----------------------------------------------------\n");
-        printf("\t\tÀÜ¾× Á¶È¸ ¼º°ø\n");
+        printf("\t\tì”ì•¡ ì¡°íšŒ ì„±ê³µ\n");
     }
 
 
@@ -467,8 +467,8 @@ int money_check_page(){
     MYSQL_ROW row;
 
     printf("\n\n\n");
-    printf("\t\t\t\tÀÜ¾× Á¤º¸ Á¶È¸\n\n\n");
-    printf("\t\t\t¤¿-°èÁÂ------------------------ÀÜ¾×---¦¤\n");
+    printf("\t\t\t\tì”ì•¡ ì •ë³´ ì¡°íšŒ\n\n\n");
+    printf("\t\t\tã…-ê³„ì¢Œ------------------------ì”ì•¡---â”\n");
     while (row = mysql_fetch_row(result))
 
     {
@@ -480,7 +480,7 @@ int money_check_page(){
             printf("\t\t          %s ", row[i]);
 
         }
-        printf("\n\t\t\t¤¿------------------------------------¤Ã\n");
+        printf("\n\t\t\tã…------------------------------------ã…“\n");
     }
     printf("\n\n\n\n");
 
@@ -517,7 +517,7 @@ int Check_your_account() {
 
     printf("\n\n");
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\tº»ÀÎ °èÁÂ ¹øÈ£  *5ÀÚ¸® (- ÇÏÀÌÇÂ) »©°í ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\të³¸ì¸ ê³„ì¢Œ ë²ˆí˜¸  *5ìë¦¬ (- í•˜ì´í”ˆ) ë¹¼ê³  ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%d", &useraccnum);
 
     snprintf(query, sizeof(query), "SELECT useraccnum,username,userage,userphone FROM membertbl where useraccnum = '%d'", useraccnum);
@@ -557,8 +557,8 @@ int Check_your_account() {
     MYSQL_ROW row;
 
     printf("\n\n\n");
-    printf("\t\t\t\tº»ÀÎ Á¤º¸ Á¶È¸\n\n\n");
-    printf("\t¤¿-°èÁÂ------------ÀÌ¸§-----------³ªÀÌ--------------ÈŞ´ëÆù----------¦¤\n");
+    printf("\t\t\t\të³¸ì¸ ì •ë³´ ì¡°íšŒ\n\n\n");
+    printf("\tã…-ê³„ì¢Œ------------ì´ë¦„-----------ë‚˜ì´--------------íœ´ëŒ€í°----------â”\n");
     while (row = mysql_fetch_row(result))
 
     {
@@ -570,7 +570,7 @@ int Check_your_account() {
             printf("          %s ", row[i]);
 
         }
-        printf("\n\t¤¿------------------------------------------------------------------¤Ã\n");
+        printf("\n\tã…------------------------------------------------------------------ã…“\n");
     }
     printf("\n\n\n\n");
 
@@ -597,17 +597,17 @@ int delete_user() {
 
     printf("\n\n");
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\t»èÁ¦ÇÒ »ç¿ëÀÚÀÇ °èÁÂ ¹øÈ£  *5ÀÚ¸® (- ÇÏÀÌÇÂ) »©°í ÀÔ·ÂÇØÁÖ¼¼¿ä : ");
+    printf("\t\tì‚­ì œí•  ì‚¬ìš©ìì˜ ê³„ì¢Œ ë²ˆí˜¸  *5ìë¦¬ (- í•˜ì´í”ˆ) ë¹¼ê³  ì…ë ¥í•´ì£¼ì„¸ìš” : ");
     scanf("%d", &useraccnum);
 
-    // ¸ÕÀú membermoneytbl Å×ÀÌºí¿¡¼­ »ç¿ëÀÚ¿Í °ü·ÃµÈ ¸ğµç µ¥ÀÌÅÍ »èÁ¦
+    
     snprintf(query, sizeof(query), "DELETE FROM membermoneytbl WHERE useraccnum = %d", useraccnum);
 
     if (mysql_query(con, query)) {
         finish_with_error(con);
     }
 
-    // ÀÌÈÄ membertbl Å×ÀÌºí¿¡¼­ »ç¿ëÀÚ »èÁ¦
+    
     snprintf(query, sizeof(query), "DELETE FROM membertbl WHERE useraccnum = %d", useraccnum);
 
     if (mysql_query(con, query)) {
@@ -615,7 +615,7 @@ int delete_user() {
     }
 
     printf("\t\t-----------------------------------------------------\n");
-    printf("\t\t»ç¿ëÀÚ °èÁ¤ÀÌ »èÁ¦µÇ¾ú½À´Ï´Ù.\n");
+    printf("\t\tì‚¬ìš©ì ê³„ì •ì´ ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.\n");
 
     mysql_close(con);
 
