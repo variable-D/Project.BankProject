@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include <mysql.h>
 #pragma warning(disable : 4996)
 #pragma comment(lib, "libmysql.lib")
